@@ -16,6 +16,11 @@ A real-time cryptocurrency price tracking application built with React, TypeScri
 - npm or yarn package manager
 - CoinGecko API key
 
+## CoinGecko API Registration
+
+[CoinGecko API](https://www.coingecko.com/en/api)
+
+
 ## Setup Instructions
 
 1. Clone the repository:
