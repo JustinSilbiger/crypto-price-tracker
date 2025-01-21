@@ -1,0 +1,409 @@
+#root {
+  width: 100%;
+}
+
+/* Header & Navigation */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 16px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 32px;
+  height: 100%;
+}
+
+.nav-tab {
+  height: 100%;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.nav-tab:hover,
+.nav-tab.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent-blue);
+}
+
+/* Crypto Table */
+.crypto-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 80px;
+  font-size: 14px;
+}
+
+.table-header {
+  position: sticky;
+  top: 64px;
+  background-color: var(--bg-secondary);
+  z-index: 90;
+  height: 48px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table-header th {
+  padding: 0 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: start;
+  white-space: nowrap;
+}
+
+.crypto-row {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s ease;
+  height: 80px;
+}
+
+.crypto-row:hover {
+  background-color: var(--hover-bg);
+}
+
+.crypto-row td {
+  padding: 8px 16px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+/* Rank column */
+.rank-column {
+  width: 40px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* Name column with logo */
+.name-column {
+  min-width: 200px;
+}
+
+.coin-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.coin-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.coin-name-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.coin-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.coin-symbol {
+  color: var(--text-secondary);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/* Price column */
+.price-column {
+  text-align: right !important;
+  min-width: 120px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Price change columns */
+.price-change-column {
+  text-align: right !important;
+  min-width: 100px;
+  font-weight: 500;
+}
+
+.price-up, .price-down {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.price-up::before {
+  content: '▲';
+  font-size: 10px;
+}
+
+.price-down::before {
+  content: '▼';
+  font-size: 10px;
+}
+
+/* Market cap column */
+.market-cap-column {
+  text-align: right !important;
+  min-width: 155px;
+}
+
+/* Volume column */
+.volume-column {
+  text-align: right !important;
+  min-width: 155px;
+}
+
+/* Supply columns */
+.supply-column {
+  text-align: right !important;
+  min-width: 155px;
+}
+
+/* Last 7d chart column */
+.chart-column {
+  width: 165px;
+  padding: 0 16px;
+}
+
+/* Star/Favorite column */
+.star-column {
+  width: 40px;
+  text-align: center !important;
+}
+
+.star-icon {
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.star-icon:hover {
+  color: var(--accent-yellow);
+}
+
+.star-icon.active {
+  color: var(--accent-yellow);
+}
+
+/* Price Changes */
+.price-up {
+  color: var(--accent-green);
+}
+
+.price-down {
+  color: var(--accent-red);
+}
+
+/* Stats Cards */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.stats-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.stats-card h3 {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0 0 8px 0;
+}
+
+.stats-card .value {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Filters and Search */
+.filters-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.search-input {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: var(--text-primary);
+  font-size: 14px;
+  width: 300px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: all 0.3s ease;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em var(--accent-yellow));
+  transform: rotate(10deg);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Funky card styling */
+.card {
+  padding: 1.5em;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-red);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-red);
+}
+
+/* Price changes animation */
+.price-change-positive {
+  color: #4CAF50;
+  animation: pulse-green 2s infinite;
+}
+
+.price-change-negative {
+  color: var(--primary-red);
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-green {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+@keyframes pulse-red {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Chart container */
+.chart-container {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Navigation styling */
+.nav-container {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--primary-red);
+}
+
+.nav-button {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  position: relative;
+}
+
+.nav-button.active {
+  color: var(--accent-yellow);
+}
+
+.nav-button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-yellow);
+}
+
+/* Stats cards */
+.stats-card {
+  background: linear-gradient(135deg, 
+    rgba(230, 57, 70, 0.1) 0%, 
+    rgba(155, 77, 202, 0.1) 100%
+  );
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(230, 57, 70, 0.2);
+}
